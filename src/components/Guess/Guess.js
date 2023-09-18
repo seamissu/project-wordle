@@ -8,15 +8,15 @@ function Cell({ letter, status }) {
 }
 
 function Guess({ value, answer }) {
-  const statusArray = checkGuess(value, answer);
+  const resultArray = checkGuess(value, answer);
 
   return (
     <p className="guess">
       {range(5).map((num) => (
         <Cell
           key={num}
-          letter={statusArray ? statusArray[num].letter : undefined}
-          status={statusArray ? statusArray[num].status : undefined}
+          letter={resultArray ? resultArray[num].letter : undefined}
+          status={resultArray ? resultArray[num].status : undefined}
         />
       ))}
     </p>
