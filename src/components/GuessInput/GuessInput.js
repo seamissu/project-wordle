@@ -7,7 +7,6 @@ function GuessInput({ submitHandler }) {
       className="guess-input-wrapper"
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(input);
         submitHandler(input);
         setInput('');
       }}
